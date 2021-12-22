@@ -1,0 +1,6 @@
+incluir tiempos de toruqeo en base de datos
+incluir logo
+
+usar tablas de sofia
+
+desempeño en la union, y tiempo de uniones

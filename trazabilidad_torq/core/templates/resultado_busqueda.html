@@ -1,0 +1,40 @@
+<html>
+
+<head>
+
+    <title> resultado busqueda </title>
+
+</head>
+
+<body>
+
+<p>  Proyecto buscado <strong>{{proy}}</strong></p>
+
+{% if proy_buscado %}
+
+<p> tuercas encontradas en proyecto: {{proy_buscado|length}}  encontrado(s)</p>
+
+    <ul>
+        {% for tuercas in proy_buscado %}
+
+            <li>
+                Tuerca tipo: {{ tuercas.tipo}}; Tipo acabado: {{tuercas.acabado}}; Estado tuerca: {{tuercas.estado}}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+
+    <p> Proyecto no encontrado </p>
+
+{% endif %}
+
+
+
+
+
+
+</body>
+
+
+</html>

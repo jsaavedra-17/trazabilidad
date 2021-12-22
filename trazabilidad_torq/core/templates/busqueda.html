@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+    <title> Busqueda tuercas </title>
+
+</head>
+
+
+
+<body>
+<p> <strong>Modulo de trazabilidad Torqueador</strong></p>
+<p> <strong>Busqueda de tuercas en BD</strong></p>
+
+
+<form action="/buscado/" method="get">
+
+<select id="lista_desplegable" onchange="resetFieldToDefault();" >
+   <option selected value="0"> Elija criterio de búsqueda </option>
+       <optgroup label="Buscar por: ">
+       <option value=1>Fecha</option>
+       <option value=2>Proyecto</option>
+       <option value=3>Nodo</option>
+   </optgroup>
+
+</select>
+
+<!--</form> -->
+    <label for="start"><br><br><br><br>Ingrese fecha de torqueo:<br></label>
+ <form action="/buscado/" method="GET">
+    <input type="date" id="start" name3="date_torqueo"
+       value="2021-07-22"
+       min="2019-01-01" max="2021-12-31">
+
+    <label for="trc"><br><br>Ingrese Nodo/Proyecto:<br></label>
+    <input type="text" id="trc" name="proy">
+
+
+    <input type="submit" value="buscar">
+</form>
+
+        <script type="text/javascript">
+            var e = document.getElementById("lista_desplegable");
+            var strUser = e.value;
+           /* document.write(strUser);*/
+            $.POST(URL, strUser);
+
+
+
+        </script>
+</body>
+
+</html>
